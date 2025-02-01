@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://das3x3s3max2d"]
+
+[ext_resource type="Script" path="res://minventory/item/item_data.gd" id="1_pk6jj"]
+[ext_resource type="Texture2D" uid="uid://cydc6mu6arlm" path="res://minventory/itemimages/ironbow.png" id="2_4fu5b"]
+
+[resource]
+script = ExtResource("1_pk6jj")
+name = "Iron Bow"
+description = "Sturdy bow made from iron"
+stackable = false
+texture = ExtResource("2_4fu5b")

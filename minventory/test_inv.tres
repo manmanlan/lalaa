@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="InventoryData" load_steps=8 format=3 uid="uid://bubc4evvf1j0a"]
+
+[ext_resource type="Script" path="res://minventory/inventory/inventory_data.gd" id="1_bnn5l"]
+[ext_resource type="Script" path="res://minventory/inventory/slot_data.gd" id="2_kgpm3"]
+[ext_resource type="Resource" uid="uid://dtbig68h0ur3h" path="res://minventory/item/items/applepie.tres" id="3_puexe"]
+[ext_resource type="Resource" uid="uid://6y614p54fnfd" path="res://minventory/item/items/lighting_bow.tres" id="4_61nhf"]
+
+[sub_resource type="Resource" id="Resource_fddt4"]
+script = ExtResource("2_kgpm3")
+item_data = ExtResource("3_puexe")
+quantity = 2
+
+[sub_resource type="Resource" id="Resource_dacyc"]
+script = ExtResource("2_kgpm3")
+item_data = ExtResource("3_puexe")
+quantity = 2
+
+[sub_resource type="Resource" id="Resource_st07d"]
+script = ExtResource("2_kgpm3")
+item_data = ExtResource("4_61nhf")
+quantity = 1
+
+[resource]
+script = ExtResource("1_bnn5l")
+slot_datas = Array[ExtResource("2_kgpm3")]([null, null, null, null, null, null, null, SubResource("Resource_fddt4"), SubResource("Resource_dacyc"), null, null, null, SubResource("Resource_st07d"), null, null, null, null, null])

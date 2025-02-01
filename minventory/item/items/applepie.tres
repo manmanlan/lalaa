@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://dtbig68h0ur3h"]
+
+[ext_resource type="Script" path="res://minventory/item/item_data.gd" id="1_ack2a"]
+[ext_resource type="Texture2D" uid="uid://dykqmr575is8o" path="res://minventory/itemimages/06_apple_pie_dish.png" id="2_nsk8n"]
+
+[resource]
+script = ExtResource("1_ack2a")
+name = "Apple Pie"
+description = "yummy"
+stackable = true
+texture = ExtResource("2_nsk8n")
