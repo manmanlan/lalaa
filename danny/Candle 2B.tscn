@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://d1b5jrd54wre5"]
+
+[ext_resource type="Texture2D" uid="uid://bq852r0sjibjg" path="res://Assets/Animations/candleB_01.png" id="1_g7aha"]
+[ext_resource type="Texture2D" uid="uid://b5tj500kwfp6m" path="res://Assets/Animations/candleB_02.png" id="2_1pn0g"]
+[ext_resource type="Texture2D" uid="uid://c14nwoyp07j3o" path="res://Assets/Animations/candleB_03.png" id="3_pr45p"]
+[ext_resource type="Texture2D" uid="uid://dif8jq5xbsqc7" path="res://Assets/Animations/candleB_04.png" id="4_k15od"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ah86k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_g7aha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1pn0g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pr45p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_k15od")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+position = Vector2(6, 7)
+rotation = 3.14159
+sprite_frames = SubResource("SpriteFrames_ah86k")
+frame_progress = 0.429683
+centered = false
+flip_v = true

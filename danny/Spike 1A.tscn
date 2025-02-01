@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://djaap04fiv6b2"]
+
+[ext_resource type="Texture2D" uid="uid://condjpfwkxpxv" path="res://Assets/Animations/spike_0.png" id="1_230di"]
+[ext_resource type="Texture2D" uid="uid://o3u5dx05ky87" path="res://Assets/Animations/spike_1.png" id="2_olv7y"]
+[ext_resource type="Texture2D" uid="uid://bvkctj34omodc" path="res://Assets/Animations/spike_2.png" id="3_psq7b"]
+[ext_resource type="Texture2D" uid="uid://bm4wk0wqebknn" path="res://Assets/Animations/spike_3.png" id="4_yk8e3"]
+[ext_resource type="Texture2D" uid="uid://hbg8hr7iqsvt" path="res://Assets/Animations/spike_4.png" id="5_r8j6k"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_66124"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_230di")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_olv7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_psq7b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_yk8e3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_r8j6k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q3e6t"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+position = Vector2(7, 6)
+rotation = 3.14159
+sprite_frames = SubResource("SpriteFrames_66124")
+frame_progress = 0.520652
+centered = false
+flip_v = true
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(7, 6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, 1)
+scale = Vector2(0.8, 0.8)
+shape = SubResource("CircleShape2D_q3e6t")
