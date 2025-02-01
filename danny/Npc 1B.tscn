@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://bo85hpncxfjcf"]
+
+[ext_resource type="Texture2D" uid="uid://cl45wuybxiyfl" path="res://Assets/Animations/NPC_Characters_v1.0/Male1.png" id="1_x7kjh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_826eh"]
+atlas = ExtResource("1_x7kjh")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqx0f"]
+atlas = ExtResource("1_x7kjh")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gulkv"]
+atlas = ExtResource("1_x7kjh")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c7sbt"]
+atlas = ExtResource("1_x7kjh")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_78jn5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_826eh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqx0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gulkv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c7sbt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ni5ds"]
+radius = 7.0
+height = 34.0
+
+[node name="Denny" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_78jn5")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -1)
+shape = SubResource("CapsuleShape2D_ni5ds")

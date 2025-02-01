@@ -1,0 +1,77 @@
+[gd_scene load_steps=3 format=3 uid="uid://b62apwotr8aww"]
+
+[ext_resource type="Script" path="res://danny/settings_menu.gd" id="1_d14xe"]
+[ext_resource type="Script" path="res://danny/VolumeSlider.gd" id="2_ai1ow"]
+
+[node name="Settings Menu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d14xe")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel"]
+layout_mode = 2
+offset_left = 502.0
+offset_top = 229.0
+offset_right = 671.0
+offset_bottom = 425.0
+
+[node name="Master Volume" type="Button" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+text = "Master Volume"
+
+[node name="Master Vol" type="HSlider" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+value = 1.0
+script = ExtResource("2_ai1ow")
+bus_name = "Master"
+
+[node name="Sound Effect Volume" type="Button" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+text = "Sound Effect Volume"
+
+[node name="SFX Vol" type="HSlider" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+value = 1.0
+script = ExtResource("2_ai1ow")
+bus_name = "SFX"
+
+[node name="Music Volume" type="Button" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+text = "Music Volume"
+
+[node name="Music Vol" type="HSlider" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+value = 1.0
+script = ExtResource("2_ai1ow")
+bus_name = "Music"
+
+[node name="Back" type="Button" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+text = "Back"
+
+[connection signal="mouse_exited" from="CanvasLayer/Panel/VBoxContainer/Master Vol" to="." method="_on_master_vol_mouse_exited"]
+[connection signal="mouse_exited" from="CanvasLayer/Panel/VBoxContainer/SFX Vol" to="." method="_on_sfx_vol_mouse_exited"]
+[connection signal="mouse_exited" from="CanvasLayer/Panel/VBoxContainer/Music Vol" to="." method="_on_music_vol_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/Back" to="." method="_on_back_pressed"]

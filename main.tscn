@@ -1,13 +1,95 @@
-[gd_scene load_steps=5 format=3 uid="uid://c5a0yllv2jlfd"]
+[gd_scene load_steps=22 format=3 uid="uid://c5a0yllv2jlfd"]
 
 [ext_resource type="PackedScene" uid="uid://dbsv47i7p5va6" path="res://player.tscn" id="1_ffgq3"]
+[ext_resource type="Script" path="res://danny/player.gd" id="2_iyka1"]
 [ext_resource type="PackedScene" uid="uid://irmr0ufltxwc" path="res://bow1_pickup.tscn" id="2_k42n8"]
 [ext_resource type="PackedScene" uid="uid://cy37jtf252aor" path="res://sword1_pickp.tscn" id="5_csdlv"]
+[ext_resource type="PackedScene" uid="uid://chkcjk5wwey77" path="res://danny/Pause_menu.tscn" id="5_mdgok"]
 [ext_resource type="PackedScene" uid="uid://bm1ypsg65n3nw" path="res://procedeal.tscn" id="6_om0js"]
+[ext_resource type="Script" path="res://danny/settings_menu2.gd" id="6_yu4vt"]
+[ext_resource type="PackedScene" uid="uid://j4slnifl3382" path="res://danny/death_screen_1.tscn" id="7_4nsgw"]
+[ext_resource type="PackedScene" uid="uid://bde8i1lsvkw0a" path="res://enemy_shooty_double.tscn" id="7_hi71j"]
+[ext_resource type="PackedScene" uid="uid://dflypnldgbt10" path="res://danny/hud.tscn" id="9_s6f53"]
+[ext_resource type="Texture2D" uid="uid://bmgpqt8h5bpnk" path="res://danny/Denny Assets/Animatioonn/AnimationSheets/HealthRegeneration/LifeHealing-Sheet - Impriv.png" id="10_4yjb6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmw2g"]
+atlas = ExtResource("10_4yjb6")
+region = Rect2(0, 0, 64, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xl1s2"]
+atlas = ExtResource("10_4yjb6")
+region = Rect2(0, 16, 64, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apu58"]
+atlas = ExtResource("10_4yjb6")
+region = Rect2(0, 32, 64, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6e2ha"]
+atlas = ExtResource("10_4yjb6")
+region = Rect2(0, 48, 64, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_euey2"]
+atlas = ExtResource("10_4yjb6")
+region = Rect2(0, 64, 64, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uieaj"]
+atlas = ExtResource("10_4yjb6")
+region = Rect2(0, 80, 64, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vfj0r"]
+atlas = ExtResource("10_4yjb6")
+region = Rect2(0, 96, 64, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i263e"]
+atlas = ExtResource("10_4yjb6")
+region = Rect2(0, 112, 64, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkgfp"]
+atlas = ExtResource("10_4yjb6")
+region = Rect2(0, 128, 64, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2s382"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmw2g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xl1s2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apu58")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6e2ha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_euey2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uieaj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vfj0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i263e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dkgfp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("1_ffgq3")]
+script = ExtResource("2_iyka1")
+
+[node name="Camera2D2" type="Camera2D" parent="player"]
+zoom = Vector2(3, 3)
 
 [node name="bow1 spawner" parent="." instance=ExtResource("2_k42n8")]
 position = Vector2(-139, 26)
@@ -16,3 +98,29 @@ position = Vector2(-139, 26)
 position = Vector2(-141, -13)
 
 [node name="procedeal" parent="." instance=ExtResource("6_om0js")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+
+[node name="PauseMenu1" parent="CanvasLayer" instance=ExtResource("5_mdgok")]
+metadata/_edit_use_anchors_ = true
+
+[node name="SettingsMenu22" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_yu4vt")
+metadata/_edit_use_anchors_ = true
+
+[node name="DeathScreen1" parent="CanvasLayer" instance=ExtResource("7_4nsgw")]
+visible = false
+
+[node name="enemy shooty_double" parent="." instance=ExtResource("7_hi71j")]
+
+[node name="Hud" parent="." instance=ExtResource("9_s6f53")]
+
+[node name="Healthbar" type="AnimatedSprite2D" parent="Hud"]
+position = Vector2(156, 596)
+scale = Vector2(4.05504, 3.9375)
+sprite_frames = SubResource("SpriteFrames_2s382")
