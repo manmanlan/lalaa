@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bnlu8r60046h8"
+path="res://.godot/imported/40 My Innermost Apocalypse.mp3-6415759b0b54afad0268db4c8ac16431.mp3str"
+
+[deps]
+
+source_file="res://40 My Innermost Apocalypse.mp3"
+dest_files=["res://.godot/imported/40 My Innermost Apocalypse.mp3-6415759b0b54afad0268db4c8ac16431.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

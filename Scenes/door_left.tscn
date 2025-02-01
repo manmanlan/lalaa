@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4kf5r0xqc7fa"]
+
+[ext_resource type="TileSet" uid="uid://coqlijqy3syu7" path="res://Scenes/Dungeon Build TIleset1.tres" id="1_6wd2w"]
+
+[node name="door_left" type="Node2D"]
+
+[node name="TileMap2" type="TileMap" parent="."]
+position = Vector2(-16, 16)
+tile_set = ExtResource("1_6wd2w")
+format = 2
+layer_0/name = "Floor Deco"
+layer_1/name = "Floor"
+layer_2/name = "Wall Deco"
+layer_2/tile_data = PackedInt32Array(-917468, 2031617, 1342177286, -655324, 2031617, 1342177286, -917467, 1245185, 1342177281, -851931, 1310721, 1342177281, -786395, 1376257, 1342177281, -720859, 1441793, 1342177281, -655323, 1507329, 1342177281)
+layer_3/name = "Wall"
+layer_4/name = "Deco"
+layer_4/tile_data = PackedInt32Array(-917467, 1245185, 1342177281, -851931, 1310721, 1342177281, -786395, 1376257, 1342177281, -720859, 1441793, 1342177281, -655323, 1507329, 1342177281)
+layer_5/name = "Deco2"

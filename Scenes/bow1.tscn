@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://uvf3m6m4rn6y"]
+
+[ext_resource type="Script" path="res://Scripts/bow_1.gd" id="1_h07xk"]
+[ext_resource type="Texture2D" uid="uid://c2i6c6gtt5aje" path="res://Assets/New Piskel-1.png (4).png" id="2_tlqgf"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_h07xk")
+
+[node name="bow" type="Sprite2D" parent="."]
+texture_filter = 1
+rotation = 3.14159
+texture = ExtResource("2_tlqgf")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true

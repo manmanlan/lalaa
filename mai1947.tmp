@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5a0yllv2jlfd"]
+
+[ext_resource type="PackedScene" uid="uid://dbsv47i7p5va6" path="res://Scenes/player.tscn" id="1_ffgq3"]
+[ext_resource type="PackedScene" uid="uid://irmr0ufltxwc" path="res://Scenes/bow1_pickup.tscn" id="2_k42n8"]
+[ext_resource type="PackedScene" uid="uid://ygw4fskbmk2x" path="res://Scenes/map.tscn" id="3_nx210"]
+[ext_resource type="PackedScene" uid="uid://bsqshr8lwhe2b" path="res://Scenes/enemy.tscn" id="4_da70a"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_ffgq3")]
+position = Vector2(-1, 4)
+
+[node name="bow1 spawner" parent="." instance=ExtResource("2_k42n8")]
+position = Vector2(-139, 26)
+
+[node name="map" parent="." instance=ExtResource("3_nx210")]
+
+[node name="enemy" parent="." instance=ExtResource("4_da70a")]
+position = Vector2(214, 134)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-1, 4)
+zoom = Vector2(2.5, 2.5)

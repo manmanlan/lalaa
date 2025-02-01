@@ -1,0 +1,86 @@
+[gd_scene load_steps=12 format=3 uid="uid://cu1jjtuajkg3r"]
+
+[ext_resource type="Script" path="res://enemy_shooty.gd" id="1_quen5"]
+[ext_resource type="Texture2D" uid="uid://b25yislanfhi8" path="res://Assets/New Piskel (4).png" id="2_uar1f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q6vbw"]
+size = Vector2(18, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mykxf"]
+atlas = ExtResource("2_uar1f")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xmhuh"]
+atlas = ExtResource("2_uar1f")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmuno"]
+atlas = ExtResource("2_uar1f")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lo6iq"]
+atlas = ExtResource("2_uar1f")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_om5hm"]
+atlas = ExtResource("2_uar1f")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_na6op"]
+atlas = ExtResource("2_uar1f")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgsdq"]
+atlas = ExtResource("2_uar1f")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gp8o2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mykxf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xmhuh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vmuno")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lo6iq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_om5hm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_na6op")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgsdq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="enemy shooty" type="CharacterBody2D" groups=["enemey"]]
+position = Vector2(-24, 112)
+scale = Vector2(1.5, 1.5)
+collision_layer = 2
+collision_mask = 2
+motion_mode = 1
+script = ExtResource("1_quen5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_q6vbw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_gp8o2")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

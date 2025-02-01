@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2k6ioh33er3t"]
+
+[ext_resource type="Script" path="res://Scripts/bullet.gd" id="1_yaibg"]
+[ext_resource type="Texture2D" uid="uid://cqmrpfwtkpomh" path="res://Assets/New Piskel-1.png (5).png" id="2_k8uu8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k248i"]
+radius = 4.0
+height = 14.0
+
+[node name="bullet" type="Area2D"]
+z_index = -1
+script = ExtResource("1_yaibg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -12)
+shape = SubResource("CapsuleShape2D_k248i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1, -12)
+texture = ExtResource("2_k8uu8")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+position = Vector2(1, -4)
+scale = Vector2(0.5, 0.5)
+
+[connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]

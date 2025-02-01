@@ -1,0 +1,102 @@
+[gd_scene load_steps=9 format=3 uid="uid://cmfe7f7beu864"]
+
+[ext_resource type="Script" path="res://Scripts/sword_1.gd" id="1_jtc83"]
+[ext_resource type="Texture2D" uid="uid://b02ljwb2wlxgk" path="res://Assets/New Piskel-1.png (6).png" id="2_0361i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_olnhi"]
+size = Vector2(6, 21.5)
+
+[sub_resource type="Animation" id="Animation_v7vcq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_yodkq"]
+resource_name = "Swing reset"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.820305, -0.820305]
+}
+
+[sub_resource type="Animation" id="Animation_woabu"]
+resource_name = "reset"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_jjdbr"]
+resource_name = "swing"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1.30583, -3),
+"update": 0,
+"values": [-0.820305, 0.820305]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a73yv"]
+_data = {
+"RESET": SubResource("Animation_v7vcq"),
+"Swing reset": SubResource("Animation_yodkq"),
+"reset": SubResource("Animation_woabu"),
+"swing": SubResource("Animation_jjdbr")
+}
+
+[node name="sword1" type="Node2D"]
+script = ExtResource("1_jtc83")
+
+[node name="sword1" type="Area2D" parent="."]
+position = Vector2(0, 146)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sword1"]
+position = Vector2(0.5, -17.207)
+shape = SubResource("RectangleShape2D_olnhi")
+
+[node name="swordsprite" type="Sprite2D" parent="sword1"]
+texture_filter = 1
+position = Vector2(0.517961, -17.207)
+scale = Vector2(0.9375, 1.375)
+texture = ExtResource("2_0361i")
+
+[node name="Timer" type="Timer" parent="sword1"]
+wait_time = 0.4
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sword1"]
+libraries = {
+"": SubResource("AnimationLibrary_a73yv")
+}

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b2kjdrl6pej61"
+path="res://.godot/imported/2017 Roblox Tycoon music.mp3-536430b3253e4d318a0d2635410925a9.mp3str"
+
+[deps]
+
+source_file="res://Assets/2017 Roblox Tycoon music.mp3"
+dest_files=["res://.godot/imported/2017 Roblox Tycoon music.mp3-536430b3253e4d318a0d2635410925a9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

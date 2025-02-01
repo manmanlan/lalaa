@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://ygw4fskbmk2x"]
+
+[ext_resource type="Texture2D" uid="uid://b0vteeutilfbt" path="res://Assets/New Piskel (2).png" id="1_ebvbw"]
+[ext_resource type="Script" path="res://Scripts/map.gd" id="1_wwbgy"]
+[ext_resource type="Texture2D" uid="uid://d11qc4sgmn36e" path="res://Assets/New Piskel (6).png" id="2_4uqso"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_abg23"]
+texture = ExtResource("2_4uqso")
+0:0/0 = 0
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_w4cp2"]
+vertices = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)])
+agent_radius = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bk5si"]
+texture = ExtResource("1_ebvbw")
+0:0/0 = 0
+0:0/0/z_index = -1
+0:0/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_w4cp2")
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_6puph"]
+physics_layer_0/collision_layer = 1
+navigation_layer_0/layers = 1
+sources/4 = SubResource("TileSetAtlasSource_bk5si")
+sources/1 = SubResource("TileSetAtlasSource_abg23")
+
+[node name="map" type="Node2D"]
+z_index = -2
+script = ExtResource("1_wwbgy")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+modulate = Color(1, 1, 0, 1)
+self_modulate = Color(1, 0, 1, 1)
+z_index = -2
+texture_filter = 1
+tile_set = SubResource("TileSet_6puph")
+y_sort_origin = -2
