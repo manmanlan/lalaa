@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3 uid="uid://c50ndfe2qcnko"]
+
+[ext_resource type="Script" path="res://minventory/item/item_data.gd" id="1_sxdoo"]
+
+[resource]
+script = ExtResource("1_sxdoo")
+name = ""
+description = ""
+stackable = false

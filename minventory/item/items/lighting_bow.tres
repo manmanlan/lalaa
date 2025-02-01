@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://6y614p54fnfd"]
+
+[ext_resource type="Script" path="res://minventory/item/item_data.gd" id="1_y4wv8"]
+[ext_resource type="Texture2D" uid="uid://b4dayrvur7ofb" path="res://minventory/itemimages/lightningbow.png" id="2_mk1rb"]
+
+[resource]
+script = ExtResource("1_y4wv8")
+name = "Lightning Bow"
+description = "A bow attuned with lightning"
+stackable = false
+texture = ExtResource("2_mk1rb")
