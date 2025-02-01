@@ -1,19 +1,11 @@
-res://main.tscn
+res://player.tscn
 res://Scenes/Dungeon Build TIleset1.tres
 res://Scenes/door.gd
+res://main.tscn
 res://procedeal.tscn
-res://Scenes/Dungeon Only Walls.tscn
 res://Scenes/dungeon room start.tscn
-res://danny/Dungeon Room 1A.tscn
-res://boss.tscn
 res://laser.tscn
-res://enemy_shooty_double.tscn
-res://player.tscn
-res://Scenes/door_checker_2.gd
-res://danny/Dungeon Rooms Preset.tscn
-res://danny/dungeon room start.tscn
 res://danny/Dungeon Only Walls.tscn
 res://Scenes/door_right.tscn
-res://Scenes/door_checker.gd
 res://Scenes/door_left.tscn
 res://Scenes/door_down.tscn
