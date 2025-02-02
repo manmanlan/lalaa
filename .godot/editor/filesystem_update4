@@ -1,6 +1,7 @@
-res://main.tscn
+res://player.tscn
 res://Scenes/Dungeon Build TIleset1.tres
 res://Scenes/door.gd
+
 res://minventory/test_inv.tres
 res://danny/hud.tscn
 res://danny/main_menu.tscn
@@ -23,3 +24,14 @@ res://danny/Dialogic/Dialogic Timelines/Villiger Dialogue/Max Talk.dtl
 res://danny/Dialogic/Dialogic Timelines/George.dch
 res://danny/Dialogic/Dialogic Timelines/Villiger Dialogue/George Talk.dtl
 res://danny/dungeon room start.tscn
+
+res://danny/Dungeon Room Alter.tscn
+res://Scenes/dungeon room start.tscn
+res://main.tscn
+res://enemy_shooty_double.tscn
+res://boss.tscn
+res://laser.tscn
+res://laser_2.tscn
+res://enemey_bullet.tscn
+res://danny/Dungeon Room Boss1 L1.tscn
+res://boss.gd
