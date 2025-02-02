@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://djylb6i51lvri"]
+
+[ext_resource type="Script" path="res://minventory/item/item_data.gd" id="1_m4x2j"]
+[ext_resource type="Texture2D" uid="uid://ch4f10a1c8x3d" path="res://minventory/itemimages/note.png" id="2_0mo3t"]
+
+[resource]
+script = ExtResource("1_m4x2j")
+name = "Lore4"
+description = "“The Elder speaks of duty, but never of cost.”"
+stackable = false
+texture = ExtResource("2_0mo3t")

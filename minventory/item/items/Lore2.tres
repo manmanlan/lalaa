@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bysiafjfpr7v8"]
+
+[ext_resource type="Script" path="res://minventory/item/item_data.gd" id="1_40c1m"]
+[ext_resource type="Texture2D" uid="uid://ch4f10a1c8x3d" path="res://minventory/itemimages/note.png" id="2_llqtq"]
+
+[resource]
+script = ExtResource("1_40c1m")
+name = "Lore2"
+description = "“Sacrifice is the foundation of safety. Do not question it.”"
+stackable = false
+texture = ExtResource("2_llqtq")

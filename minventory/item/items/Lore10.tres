@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://dgvbqadatsrba"]
+
+[ext_resource type="Script" path="res://minventory/item/item_data.gd" id="1_yx4uf"]
+[ext_resource type="Texture2D" uid="uid://ch4f10a1c8x3d" path="res://minventory/itemimages/note.png" id="2_8pfmn"]
+
+[resource]
+script = ExtResource("1_yx4uf")
+name = "Lore10"
+description = "“Not all who enter were meant to leave.”"
+stackable = false
+texture = ExtResource("2_8pfmn")

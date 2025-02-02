@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://rs11jlw5hxbu"]
+
+[ext_resource type="Script" path="res://minventory/item/item_data.gd" id="1_6eb2w"]
+[ext_resource type="Texture2D" uid="uid://ch4f10a1c8x3d" path="res://minventory/itemimages/note.png" id="2_mypab"]
+
+[resource]
+script = ExtResource("1_6eb2w")
+name = "Lore3"
+description = "“They never return, yet the village remains. Why?”"
+stackable = false
+texture = ExtResource("2_mypab")
