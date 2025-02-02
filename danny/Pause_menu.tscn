@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://chkcjk5wwey77"]
+
+[ext_resource type="Script" path="res://danny/pause_menu.gd" id="1_88udp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lmrqd"]
+
+[node name="PauseMenu1" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -289.0
+offset_top = -147.0
+offset_right = -289.0
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_88udp")
+
+[node name="PauseMenu" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="PauseMenu"]
+offset_right = 1165.0
+offset_bottom = 658.0
+color = Color(0, 0, 0, 0.564706)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu"]
+process_mode = 3
+offset_left = 476.0
+offset_top = 284.0
+offset_right = 675.0
+offset_bottom = 403.0
+
+[node name="Resume" type="Button" parent="PauseMenu/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_lmrqd")
+text = "Resume"
+text_overrun_behavior = 1
+
+[node name="SettingsP" type="Button" parent="PauseMenu/VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+
+[node name="Return To Main Menu" type="Button" parent="PauseMenu/VBoxContainer"]
+layout_mode = 2
+text = "Return To Main Menu"
+
+[connection signal="pressed" from="PauseMenu/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/SettingsP" to="." method="_on_settings_p_pressed"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/Return To Main Menu" to="." method="_on_return_to_main_menu_pressed"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/Return To Main Menu" to="." method="_on_quit_pressed"]

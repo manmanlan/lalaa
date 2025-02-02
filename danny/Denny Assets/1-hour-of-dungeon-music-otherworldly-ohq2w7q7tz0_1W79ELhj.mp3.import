@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c0avt64c2xb4s"
+path="res://.godot/imported/1-hour-of-dungeon-music-otherworldly-ohq2w7q7tz0_1W79ELhj.mp3-04725e674bc661194faa64b665a785c8.mp3str"
+
+[deps]
+
+source_file="res://danny/Denny Assets/1-hour-of-dungeon-music-otherworldly-ohq2w7q7tz0_1W79ELhj.mp3"
+dest_files=["res://.godot/imported/1-hour-of-dungeon-music-otherworldly-ohq2w7q7tz0_1W79ELhj.mp3-04725e674bc661194faa64b665a785c8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

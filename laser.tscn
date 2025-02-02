@@ -149,12 +149,11 @@ animation = &"new_animation"
 autoplay = "start"
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 7.0
+wait_time = 9.0
 one_shot = true
 
 [node name="Laser-light-bullit-02-253281" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_pydps")
-volume_db = 15.928
 autoplay = true
 
 [connection signal="animation_finished" from="Area2D/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

@@ -1,0 +1,180 @@
+[gd_scene load_steps=20 format=3 uid="uid://dkugg6q6q287g"]
+
+[ext_resource type="Script" path="res://laser.gd" id="1_0yq01"]
+[ext_resource type="Texture2D" uid="uid://c3k6i7s0cs0i7" path="res://Assets/Mecha-stone Golem 0.1/Mecha-stone Golem 0.1/weapon PNG/Laser_sheet.png" id="2_jjr4m"]
+[ext_resource type="AudioStream" uid="uid://bs72k4kw15lxi" path="res://laser-light-bullit-02-253281.mp3" id="3_mbbpt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gsjb"]
+atlas = ExtResource("2_jjr4m")
+region = Rect2(0, 1300, 300, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eq35e"]
+atlas = ExtResource("2_jjr4m")
+region = Rect2(0, 1400, 300, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2t4yy"]
+atlas = ExtResource("2_jjr4m")
+region = Rect2(0, 0, 300, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kl7ne"]
+atlas = ExtResource("2_jjr4m")
+region = Rect2(0, 100, 300, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oji2d"]
+atlas = ExtResource("2_jjr4m")
+region = Rect2(0, 200, 300, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bddbp"]
+atlas = ExtResource("2_jjr4m")
+region = Rect2(0, 300, 300, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q2n15"]
+atlas = ExtResource("2_jjr4m")
+region = Rect2(0, 400, 300, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o7ndo"]
+atlas = ExtResource("2_jjr4m")
+region = Rect2(0, 500, 300, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46g3g"]
+atlas = ExtResource("2_jjr4m")
+region = Rect2(0, 600, 300, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_omwgk"]
+atlas = ExtResource("2_jjr4m")
+region = Rect2(0, 700, 300, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ybs5"]
+atlas = ExtResource("2_jjr4m")
+region = Rect2(0, 800, 300, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5uswq"]
+atlas = ExtResource("2_jjr4m")
+region = Rect2(0, 900, 300, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7l3ks"]
+atlas = ExtResource("2_jjr4m")
+region = Rect2(0, 1000, 300, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pap1g"]
+atlas = ExtResource("2_jjr4m")
+region = Rect2(0, 1100, 300, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2lhkr"]
+atlas = ExtResource("2_jjr4m")
+region = Rect2(0, 1200, 300, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_utto2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7gsjb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eq35e")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2t4yy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kl7ne")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oji2d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bddbp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q2n15")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o7ndo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46g3g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_omwgk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ybs5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5uswq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7l3ks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pap1g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2lhkr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7gsjb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eq35e")
+}],
+"loop": false,
+"name": &"start",
+"speed": 10.0
+}]
+
+[node name="laser 2" type="Node2D"]
+script = ExtResource("1_0yq01")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+position = Vector2(-210, -38)
+rotation = 3.14159
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_utto2")
+animation = &"new_animation"
+autoplay = "start"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Area2D"]
+position = Vector2(199, 30)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_utto2")
+animation = &"new_animation"
+autoplay = "start"
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Area2D"]
+position = Vector2(-34, 187)
+rotation = 1.5708
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_utto2")
+animation = &"new_animation"
+autoplay = "start"
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="Area2D"]
+position = Vector2(34, -197)
+rotation = 4.71239
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_utto2")
+animation = &"new_animation"
+autoplay = "start"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 9.0
+one_shot = true
+
+[node name="Laser-light-bullit-02-253281" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_mbbpt")
+autoplay = true
+bus = &"SFX"
+parameters/looping = false
+
+[connection signal="animation_finished" from="Area2D/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="animation_finished" from="Area2D/AnimatedSprite2D2" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="animation_finished" from="Area2D/AnimatedSprite2D3" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="animation_finished" from="Area2D/AnimatedSprite2D4" to="." method="_on_animated_sprite_2d_animation_finished"]

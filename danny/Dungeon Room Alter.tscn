@@ -1,13 +1,14 @@
-[gd_scene load_steps=13 format=4 uid="uid://qcmjq0iqvht"]
+[gd_scene load_steps=15 format=4 uid="uid://qcmjq0iqvht"]
 
 [ext_resource type="Texture2D" uid="uid://by64mcaahxvri" path="res://Assets/decorative.png" id="1_skenx"]
 [ext_resource type="Texture2D" uid="uid://xstselkg206r" path="res://Assets/mainlevbuild.png" id="2_n3iag"]
-[ext_resource type="PackedScene" uid="uid://dbsv47i7p5va6" path="res://Scenes/player (2).tscn" id="3_864e5"]
-[ext_resource type="Texture2D" uid="uid://cg8klxl240gkk" path="res://Assets/decorative Blood 1.png" id="3_vl58i"]
+[ext_resource type="PackedScene" uid="uid://dbsv47i7p5va6" path="res://player.tscn" id="3_864e5"]
+[ext_resource type="Texture2D" uid="uid://cg8klxl240gkk" path="res://danny/decorative Blood 1.png" id="3_vl58i"]
 [ext_resource type="PackedScene" uid="uid://d1b5jrd54wre5" path="res://Scenes/Candle 2B.tscn" id="5_7vq6a"]
 [ext_resource type="PackedScene" uid="uid://8k1onauprcj6" path="res://Scenes/Candle 1A.tscn" id="6_e8sgp"]
 [ext_resource type="PackedScene" uid="uid://7pd0u1rhi0nh" path="res://Scenes/Chest 1A.tscn" id="7_53aex"]
 [ext_resource type="PackedScene" uid="uid://b68615tba2vuf" path="res://Scenes/Torch 1A.tscn" id="8_tag16"]
+[ext_resource type="Script" path="res://danny/area_2d.gd" id="9_b4nuv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_opys3"]
 texture = ExtResource("1_skenx")
@@ -1319,6 +1320,9 @@ sources/0 = SubResource("TileSetAtlasSource_opys3")
 sources/1 = SubResource("TileSetAtlasSource_g4qgj")
 sources/4 = SubResource("TileSetAtlasSource_qh4b0")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ts8ca"]
+size = Vector2(42, 20)
+
 [node name="TileMap2" type="TileMap"]
 tile_set = SubResource("TileSet_7eva7")
 format = 2
@@ -1326,11 +1330,7 @@ layer_0/tile_data = PackedInt32Array(-393195, 2490369, 16, -327659, 2490369, 17,
 
 [node name="player" parent="." instance=ExtResource("3_864e5")]
 position = Vector2(218, -22)
-collision_layer = 1
 collision_mask = 2
-
-[node name="Camera2D" type="Camera2D" parent="player"]
-zoom = Vector2(3, 3)
 
 [node name="Floor Deco" type="TileMapLayer" parent="."]
 use_parent_material = true
@@ -1389,3 +1389,12 @@ position = Vector2(168, -107)
 
 [node name="AnimatedSprite2D9" parent="Node2D" instance=ExtResource("8_tag16")]
 position = Vector2(280, -107)
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("9_b4nuv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(215, -133)
+shape = SubResource("RectangleShape2D_ts8ca")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

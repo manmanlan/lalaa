@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhoyh8i3y53gi"]
+
+[ext_resource type="Script" path="res://danny/main_menu.gd" id="1_5kpmg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i2yu2"]
+
+[node name="Main Menu" type="Control"]
+z_index = 10
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -289.0
+offset_top = -147.0
+offset_right = -289.0
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_5kpmg")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 548.0
+offset_top = 267.0
+offset_right = 618.0
+offset_bottom = 368.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_i2yu2")
+text = "Play"
+text_overrun_behavior = 1
+
+[node name="Settings" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

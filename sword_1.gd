@@ -38,36 +38,42 @@ func handle_shooting(action: String, direction: Vector2, rotation_deg: float) ->
 	rotation = deg_to_rad(rotation_deg)
 	
 	if Input.is_action_pressed("down"):
-		position.x=-2
-		position.y=-10
+		position.x=-1
+		position.y=--138
 	
 	if Input.is_action_pressed("up"):
 		position.x=0
-		position.y=-130
+		position.y=-146
 		
 	if Input.is_action_pressed("<-"):
-		position.x=4
+		position.x=-143
 		position.y=-3
 		
 	if Input.is_action_pressed("->"):
-		position.x=-4
+		position.x=144
 		position.y=-4
 		
 	if not shooting:
 		shooting = true
 		
-		if Anipa:
+		if not Anipa:
 			$sword1/AnimationPlayer.play("swing")
 			Anipa = true
 		else:
 			$sword1/AnimationPlayer.play("Swing reset")
 			Anipa = false
 		
-		
+# Ensure the Timer logic flows properly
 		$sword1/Timer.start()
 		await $sword1/Timer.timeout
-		
-		
+
 		$sword1/Timer.start()
 		await $sword1/Timer.timeout
 		shooting = false
+
+
+func _on_animation_completed():
+	if Anipa:
+		$sword1/AnimationPlayer.play("Swing reset")  # Reset animation after swinging
+	else:
+		$sword1/AnimationPlayer.play("swing")  # Go back to swinging if needed
