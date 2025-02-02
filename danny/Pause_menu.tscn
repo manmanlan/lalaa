@@ -51,5 +51,5 @@ text = "Return To Main Menu"
 
 [connection signal="pressed" from="PauseMenu/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="PauseMenu/VBoxContainer/SettingsP" to="." method="_on_settings_p_pressed"]
-[connection signal="pressed" from="PauseMenu/VBoxContainer/Return To Main Menu" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="PauseMenu/VBoxContainer/Return To Main Menu" to="." method="_on_return_to_main_menu_pressed"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/Return To Main Menu" to="." method="_on_quit_pressed"]

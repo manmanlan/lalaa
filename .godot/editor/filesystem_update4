@@ -1,9 +1,25 @@
 res://main.tscn
 res://Scenes/Dungeon Build TIleset1.tres
 res://Scenes/door.gd
-res://danny/death_screen_1.tscn
+res://minventory/test_inv.tres
 res://danny/hud.tscn
 res://danny/main_menu.tscn
 res://danny/Pause_menu.tscn
 res://danny/settings_menu2.tscn
 res://danny/Settings_menu.tscn
+res://sword1_pickp.tscn
+res://danny/Dungeon Room 1B.tscn
+res://danny/background.tscn
+res://max/mavillage.tscn
+res://danny/Dialogic/Dialogic Timelines/Villiger Dialogue/Leon Talk.dtl
+res://danny/Dialogic/You.dch
+res://danny/Dialogic/Dialogic Timelines/Denny.dch
+res://danny/Dialogic/Dialogic Timelines/You.dch
+res://danny/Dialogic/Dialogic Timelines/Max.dch
+res://danny/Dialogic/Dialogic Timelines/Villiger Dialogue/Denny Talk.dtl
+res://danny/Dialogic/Dialogic Timelines/Max Elder.dch
+res://danny/Dialogic/Dialogic Timelines/Elder Max.dch
+res://danny/Dialogic/Dialogic Timelines/Villiger Dialogue/Max Talk.dtl
+res://danny/Dialogic/Dialogic Timelines/George.dch
+res://danny/Dialogic/Dialogic Timelines/Villiger Dialogue/George Talk.dtl
+res://danny/dungeon room start.tscn

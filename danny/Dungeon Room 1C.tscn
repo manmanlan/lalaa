@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://by64mcaahxvri" path="res://Assets/decorative.png" id="1_flnda"]
 [ext_resource type="Texture2D" uid="uid://xstselkg206r" path="res://Assets/mainlevbuild.png" id="2_nrl7l"]
-[ext_resource type="PackedScene" uid="uid://dbsv47i7p5va6" path="res://Scenes/player.tscn" id="3_ttgwg"]
+[ext_resource type="PackedScene" uid="uid://dbsv47i7p5va6" path="res://player.tscn" id="3_ttgwg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_opys3"]
 texture = ExtResource("1_flnda")
@@ -1174,6 +1174,3 @@ layer_4/name = "Deco"
 
 [node name="player" parent="." instance=ExtResource("3_ttgwg")]
 position = Vector2(218, -22)
-
-[node name="Camera2D" type="Camera2D" parent="player"]
-zoom = Vector2(3, 3)

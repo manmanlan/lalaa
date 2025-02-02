@@ -1,0 +1,13 @@
+"Elder Max": "Ah, another traveler seeking answers. The dungeon calls to many, but few return unchanged. Tell me, how does it feel to walk its depths?"
+- “People say children have gone missing. Do you know why?”
+	"Elder Max": The Elder chuckles softly, shaking his head.
+	"Elder Max": "Ah, rumors and fear, such troublesome things. The world is dangerous, my child. Some are simply... lost to it. Tragic, truly."
+	- “I’ve spoken to the villagers. They don’t believe it’s just misfortune.”
+		"Elder Max": His smile tightens, just for a moment.
+		"Elder Max": "Ah, the pain of loss makes fools of us all. Grief demands an enemy, even where none exists. Best not to dwell on ghosts."
+		- “What do you know about the dungeon’s purpose?”
+			"Elder Max": The Elder leans back, his fingers tapping lightly on the arm of his chair.
+			"Elder Max": "A relic of the past. A place of trials. It takes, yes, but it also gives. Tell me, traveler, have you not grown stronger from your time within?"
+			- “You seem awfully calm for a man surrounded by missing children.”
+				"Elder Max": A slow, knowing smile spreads across his lips.
+				"Elder Max": "One must remain calm, no? Panic breeds chaos. And we cannot have that. Not when so much depends on order."

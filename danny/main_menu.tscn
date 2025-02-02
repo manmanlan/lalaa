@@ -5,6 +5,7 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i2yu2"]
 
 [node name="Main Menu" type="Control"]
+z_index = 10
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://cmfe7f7beu864"]
 
-[ext_resource type="Script" path="res://Scripts/sword_1.gd" id="1_jtc83"]
+[ext_resource type="Script" path="res://sword_1.gd" id="1_sde24"]
 [ext_resource type="Texture2D" uid="uid://b02ljwb2wlxgk" path="res://Assets/New Piskel-1.png (6).png" id="2_0361i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_olnhi"]
@@ -77,7 +77,7 @@ _data = {
 }
 
 [node name="sword1" type="Node2D"]
-script = ExtResource("1_jtc83")
+script = ExtResource("1_sde24")
 
 [node name="sword1" type="Area2D" parent="."]
 position = Vector2(0, 146)
