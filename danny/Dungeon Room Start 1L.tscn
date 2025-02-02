@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://7l7uq7faar7m"]
 
 [ext_resource type="TileSet" uid="uid://coqlijqy3syu7" path="res://Scenes/Dungeon Build TIleset1.tres" id="1_1hdbh"]
-[ext_resource type="PackedScene" uid="uid://8k1onauprcj6" path="res://danny/Candle 1A.tscn" id="3_jgrjp"]
-[ext_resource type="PackedScene" uid="uid://d1b5jrd54wre5" path="res://danny/Candle 2B.tscn" id="4_rmvqt"]
-[ext_resource type="PackedScene" uid="uid://b68615tba2vuf" path="res://danny/Torch 1A.tscn" id="5_6x04x"]
-[ext_resource type="PackedScene" uid="uid://7pd0u1rhi0nh" path="res://danny/Chest 1A.tscn" id="6_mebtm"]
+[ext_resource type="PackedScene" uid="uid://8k1onauprcj6" path="res://Scenes/Candle 1A.tscn" id="3_jgrjp"]
+[ext_resource type="PackedScene" uid="uid://d1b5jrd54wre5" path="res://Scenes/Candle 2B.tscn" id="4_rmvqt"]
+[ext_resource type="PackedScene" uid="uid://b68615tba2vuf" path="res://Scenes/Torch 1A.tscn" id="5_6x04x"]
+[ext_resource type="PackedScene" uid="uid://7pd0u1rhi0nh" path="res://Scenes/Chest 1A.tscn" id="6_mebtm"]
 
 [node name="TileMap2" type="TileMap"]
 tile_set = ExtResource("1_1hdbh")
