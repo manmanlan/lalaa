@@ -1,4 +1,5 @@
 extends CharacterBody2D
+const LASER_2 = preload("res://laser_2.tscn")
 const LASER = preload("res://laser.tscn")
 const ENEMEY_BULLET = preload("res://enemey_bullet.tscn")
 var speed = 50
@@ -31,10 +32,9 @@ func _physics_process(delta: float):
 		walking = false
 		$Timer.start()
 		await $Timer.timeout
-		shoot_bullet()
 		walking = true
 		
-		laser(Vector2(0, -20))
+		laser_2(Vector2(0, 0))
 		$lasertime.start()
 		await $lasertime.timeout
 		shoot = false
@@ -90,3 +90,15 @@ func laser(spawn_position: Vector2) -> void:
 	if Global.player_pos < global_position:
 			LASER_temp.scale.x = -1
 	LASER_temp.position = global_position
+
+func laser_2(spawn_position: Vector2) -> void:
+	var LASER_temp = LASER_2.instantiate()
+	get_parent().add_child(LASER_temp)
+	LASER_temp.position = global_position
+	for i in range(10):
+		$Timerrang.start()
+		await $Timerrang.timeout
+		if i ==0:
+			pass
+		else:
+			shoot_bullet()

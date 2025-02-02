@@ -1,7 +1,6 @@
-res://player.tscn
+res://main.tscn
 res://Scenes/Dungeon Build TIleset1.tres
 res://Scenes/door.gd
-res://main.tscn
 res://procedeal.tscn
 res://Scenes/dungeon room start.tscn
 res://laser.tscn
@@ -9,3 +8,7 @@ res://danny/Dungeon Only Walls.tscn
 res://Scenes/door_right.tscn
 res://Scenes/door_left.tscn
 res://Scenes/door_down.tscn
+res://player.tscn
+res://danny/Dungeon Room Boss1 L1.tscn
+res://boss.tscn
+res://laser_2.tscn
