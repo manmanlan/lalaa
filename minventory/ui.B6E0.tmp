@@ -38,5 +38,3 @@ offset_left = 663.0
 offset_top = 175.0
 offset_right = 703.0
 offset_bottom = 215.0
-
-[connection signal="gui_input" from="InventoryInterface" to="InventoryInterface" method="_on_gui_input"]
