@@ -10,6 +10,7 @@ var max_health = 8
 
 func _ready():
 	get_tree().paused = false  # Ensure game starts unpaused
+	
 
 func _on_settings_closed():
 	self.show()  # Reopen pause menu
@@ -62,4 +63,4 @@ func _on_settings_p_pressed():
 func _on_return_to_main_menu_pressed():
 	Global.player_hp = max_health
 	resume()
-	get_tree().change_scene_to_file("res://danny/main_menu.tscn")
+	get_tree().change_scene_to_file("res://danny/background.tscn")

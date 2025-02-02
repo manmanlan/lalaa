@@ -1,16 +1,19 @@
-[gd_scene load_steps=22 format=3 uid="uid://c5a0yllv2jlfd"]
+[gd_scene load_steps=25 format=3 uid="uid://c5a0yllv2jlfd"]
 
 [ext_resource type="PackedScene" uid="uid://dbsv47i7p5va6" path="res://player.tscn" id="1_ffgq3"]
+[ext_resource type="Script" path="res://main.gd" id="1_wr3q4"]
 [ext_resource type="Script" path="res://danny/player.gd" id="2_iyka1"]
 [ext_resource type="PackedScene" uid="uid://irmr0ufltxwc" path="res://bow1_pickup.tscn" id="2_k42n8"]
 [ext_resource type="PackedScene" uid="uid://cy37jtf252aor" path="res://sword1_pickp.tscn" id="5_csdlv"]
 [ext_resource type="PackedScene" uid="uid://chkcjk5wwey77" path="res://danny/Pause_menu.tscn" id="5_mdgok"]
+[ext_resource type="Script" path="res://sword_1_pickp.gd" id="5_ok1vh"]
 [ext_resource type="PackedScene" uid="uid://bm1ypsg65n3nw" path="res://procedeal.tscn" id="6_om0js"]
 [ext_resource type="Script" path="res://danny/settings_menu2.gd" id="6_yu4vt"]
 [ext_resource type="PackedScene" uid="uid://j4slnifl3382" path="res://danny/death_screen_1.tscn" id="7_4nsgw"]
 [ext_resource type="PackedScene" uid="uid://bde8i1lsvkw0a" path="res://enemy_shooty_double.tscn" id="7_hi71j"]
 [ext_resource type="PackedScene" uid="uid://dflypnldgbt10" path="res://danny/hud.tscn" id="9_s6f53"]
 [ext_resource type="Texture2D" uid="uid://bmgpqt8h5bpnk" path="res://danny/Denny Assets/Animatioonn/AnimationSheets/HealthRegeneration/LifeHealing-Sheet - Impriv.png" id="10_4yjb6"]
+[ext_resource type="AudioStream" uid="uid://c0avt64c2xb4s" path="res://danny/Denny Assets/1-hour-of-dungeon-music-otherworldly-ohq2w7q7tz0_1W79ELhj.mp3" id="14_3t00o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dmw2g"]
 atlas = ExtResource("10_4yjb6")
@@ -84,6 +87,7 @@ animations = [{
 }]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_wr3q4")
 
 [node name="player" parent="." instance=ExtResource("1_ffgq3")]
 position = Vector2(450, 20)
@@ -95,6 +99,7 @@ position = Vector2(-139, 26)
 
 [node name="Area2D" parent="." instance=ExtResource("5_csdlv")]
 position = Vector2(-141, -13)
+script = ExtResource("5_ok1vh")
 
 [node name="procedeal" parent="." instance=ExtResource("6_om0js")]
 
@@ -123,3 +128,9 @@ visible = false
 position = Vector2(156, 596)
 scale = Vector2(4.05504, 3.9375)
 sprite_frames = SubResource("SpriteFrames_2s382")
+
+[node name="1-hour-of-dungeon-music-otherworldly-ohq2w7q7Tz01w79eLhj" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_3t00o")
+volume_db = -10.054
+autoplay = true
+bus = &"Music"

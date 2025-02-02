@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Work 1"
-run/main_scene="res://danny/main_menu.tscn"
+run/main_scene="res://danny/background.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
 
@@ -27,11 +27,16 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"Bob": "res://danny/Dialogic/Bob.dch",
-"Narrator": "res://danny/Dialogic/Narrator.dch"
+"Denny": "res://danny/Dialogic/Dialogic Timelines/Denny.dch",
+"Elder Max": "res://danny/Dialogic/Dialogic Timelines/Elder Max.dch",
+"George": "res://danny/Dialogic/Dialogic Timelines/George.dch",
+"Leon": "res://danny/Dialogic/Dialogic Timelines/Leon.dch",
+"Narrator": "res://danny/Dialogic/Dialogic Timelines/Narrator.dch",
+"You": "res://danny/Dialogic/Dialogic Timelines/You.dch"
 }
 directories/dtl_directory={
 "Defeat Miniboss that Holds a Secret": "res://danny/Dialogic/Dialogic Timelines/Act 2/Defeat Miniboss that Holds a Secret.dtl",
+"Denny Talk": "res://danny/Dialogic/Dialogic Timelines/Villiger Dialogue/Denny Talk.dtl",
 "Ending Dialogue": "res://danny/Dialogic/Dialogic Timelines/Act 4/Ending Dialogue.dtl",
 "Final Choice Self-Sacrifice": "res://danny/Dialogic/Dialogic Timelines/Act 4/Final Choice Self-Sacrifice.dtl",
 "Final Choice Village Sacrifice": "res://danny/Dialogic/Dialogic Timelines/Act 4/Final Choice Village Sacrifice.dtl",
@@ -41,10 +46,33 @@ directories/dtl_directory={
 "First Exit of the Altar": "res://danny/Dialogic/Dialogic Timelines/Act 1/First Exit of the Altar.dtl",
 "First Time Outside The Dungeon": "res://danny/Dialogic/Dialogic Timelines/Act 2/First Time Outside The Dungeon.dtl",
 "First Village Entrance": "res://danny/Dialogic/Dialogic Timelines/Act 2/First Village Entrance.dtl",
+"George Talk": "res://danny/Dialogic/Dialogic Timelines/Villiger Dialogue/George Talk.dtl",
 "Journal Page 1": "res://danny/Dialogic/Dialogic Timelines/Act 1/Journal Page 1.dtl",
-"Talk to one of the villiagers": "res://danny/Dialogic/Dialogic Timelines/Talk to one of the villiagers.dtl",
+"Leon Talk": "res://danny/Dialogic/Dialogic Timelines/Villiger Dialogue/Leon Talk.dtl",
+"Max Talk": "res://danny/Dialogic/Dialogic Timelines/Villiger Dialogue/Max Talk.dtl",
+"Talk to one of the villiagers": "res://danny/Dialogic/Dialogic Timelines/Act 2/Talk to one of the villiagers.dtl",
 "The First Awakening Alter Spawn": "res://danny/Dialogic/Dialogic Timelines/Act 1/The First Awakening Alter Spawn.dtl"
 }
+extensions_folder="res://addons/dialogic_additions"
+text/letter_speed=0.004
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+audio/max_channels=4.0
+animations/join_default_length=0.5
+animations/join_default_wait=true
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/cross_fade_default_length=0.5
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
 
 [display]
 

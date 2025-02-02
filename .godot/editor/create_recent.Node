@@ -1,7 +1,10 @@
+
+Camera2D
+DialogicEditor
+CanvasLayer
 Timer
 CollisionShape2D
 Area2D
 CanvasLayer
 Node2D
-Camera2D
 AnimatedSprite2D
