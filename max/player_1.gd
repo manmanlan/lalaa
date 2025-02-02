@@ -127,9 +127,18 @@ func update_layer_region(layer: Sprite2D, frame_x: int, frame_y: int) -> void:
 			print("Warning: region_rect out of bounds for layer: ", layer.name)
 			
 
+@onready var interact_ray: RayCast2D = $InteractRay
+
 signal toggle_inventory()
 @export var inventory_data: InventoryData
 
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("inventory"):
 		toggle_inventory.emit()
+		
+	if Input.is_action_just_pressed("interact"):
+		interact()
+		
+func interact() -> void:
+	if interact_ray.is_colliding():
+		interact_ray.get_collider().player_interact()

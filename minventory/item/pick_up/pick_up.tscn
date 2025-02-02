@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dh3f5567hhako"]
+
+[ext_resource type="Script" path="res://minventory/item/pick_up/pick_up.gd" id="1_ecuhv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jqb3o"]
+
+[node name="Pickup" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_ecuhv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_jqb3o")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

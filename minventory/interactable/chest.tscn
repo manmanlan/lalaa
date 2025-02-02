@@ -1,0 +1,27 @@
+[gd_scene load_steps=8 format=3 uid="uid://ds0i27qh5uhbk"]
+
+[ext_resource type="Script" path="res://minventory/interactable/chest.gd" id="1_g6dnq"]
+[ext_resource type="Script" path="res://minventory/inventory/inventory_data.gd" id="2_i4i7v"]
+[ext_resource type="Script" path="res://minventory/inventory/slot_data.gd" id="3_xm8on"]
+[ext_resource type="Resource" uid="uid://dtbig68h0ur3h" path="res://minventory/item/items/applepie.tres" id="4_pcpx4"]
+
+[sub_resource type="Resource" id="Resource_hu37m"]
+script = ExtResource("3_xm8on")
+item_data = ExtResource("4_pcpx4")
+quantity = 21
+
+[sub_resource type="Resource" id="Resource_xfggx"]
+script = ExtResource("2_i4i7v")
+slot_datas = Array[ExtResource("3_xm8on")]([SubResource("Resource_hu37m"), null, null, null])
+
+[sub_resource type="BoxMesh" id="BoxMesh_pmb8c"]
+
+[node name="Chest" type="StaticBody2D" groups=["external_inventory"]]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_g6dnq")
+inventory_data = SubResource("Resource_xfggx")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+scale = Vector2(10, 10)
+mesh = SubResource("BoxMesh_pmb8c")

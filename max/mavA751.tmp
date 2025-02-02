@@ -10,14 +10,14 @@
 [ext_resource type="Script" path="res://max/musicnsound.gd" id="4_klxpu"]
 [ext_resource type="Texture2D" uid="uid://dg3d8cjvlvi1t" path="res://max/floor_and_deoratives.png" id="5_om1wd"]
 [ext_resource type="PackedScene" uid="uid://irmr0ufltxwc" path="res://bow1_pickup.tscn" id="6_kkqs4"]
-
+[ext_resource type="PackedScene" uid="uid://ds0i27qh5uhbk" path="res://minventory/interactable/chest.tscn" id="7_12bon"]
 [ext_resource type="PackedScene" uid="uid://kb60y2sb0xxc" path="res://minventory/ui.tscn" id="11_pr0q6"]
 [ext_resource type="Script" path="res://minventory/inventory/inventory_interface.gd" id="13_hayhh"]
 [ext_resource type="PackedScene" uid="uid://dh3f5567hhako" path="res://minventory/item/pick_up/pick_up.tscn" id="13_mlxso"]
 [ext_resource type="PackedScene" uid="uid://uaqrs2x7llmm" path="res://minventory/inventory/inventory.tscn" id="14_5tfic"]
+[ext_resource type="Resource" uid="uid://dtbig68h0ur3h" path="res://minventory/item/items/applepie.tres" id="14_ordjk"]
 [ext_resource type="PackedScene" uid="uid://g6h8a6h8yfh4" path="res://minventory/inventory/slot.tscn" id="15_jc3us"]
 [ext_resource type="Script" path="res://minventory/inventory/slot_data.gd" id="15_q2xlq"]
-[ext_resource type="Resource" uid="uid://bvp1y8v7qd5f3" path="res://minventory/item/items/note1.tres" id="17_553h6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4jgri"]
 texture = ExtResource("1_6cqjc")
@@ -4826,7 +4826,7 @@ sources/2 = SubResource("TileSetAtlasSource_vgvfo")
 
 [sub_resource type="Resource" id="Resource_bcms1"]
 script = ExtResource("15_q2xlq")
-item_data = ExtResource("17_553h6")
+item_data = ExtResource("14_ordjk")
 quantity = 1
 
 [node name="Node2D" type="Node2D"]
@@ -4846,7 +4846,6 @@ volume_db = -11.886
 autoplay = true
 max_distance = 480.0
 attenuation = 0.482968
-bus = &"SFX"
 parameters/looping = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="village"]
@@ -4915,7 +4914,6 @@ bg_music_player = NodePath("../villagemusic")
 stream = ExtResource("3_raee5")
 volume_db = -23.784
 autoplay = true
-bus = &"Music"
 parameters/looping = true
 
 [node name="Area2D" parent="." instance=ExtResource("6_kkqs4")]
@@ -4957,7 +4955,7 @@ offset_right = 703.0
 offset_bottom = 215.0
 
 [node name="Pickup" parent="." instance=ExtResource("13_mlxso")]
-position = Vector2(523, -417)
+position = Vector2(-275, -172)
 slot_data = SubResource("Resource_bcms1")
 
 [connection signal="drop_slot_data" from="UI/InventoryInterface2" to="." method="_on_inventory_interface_2_drop_slot_data"]
