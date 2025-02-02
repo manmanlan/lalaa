@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://cfn8y2ixakmyi"]
+
+[ext_resource type="Script" path="res://minventory/item/item_data.gd" id="1_y1dai"]
+[ext_resource type="Texture2D" uid="uid://ch4f10a1c8x3d" path="res://minventory/itemimages/note.png" id="2_k28wk"]
+
+[resource]
+script = ExtResource("1_y1dai")
+name = "Lore9"
+description = "“They call it a dungeon. We once called it home.”"
+stackable = false
+texture = ExtResource("2_k28wk")

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bsdxaae10a2mc"]
+
+[ext_resource type="Script" path="res://minventory/item/item_data.gd" id="1_8st0y"]
+[ext_resource type="Texture2D" uid="uid://ch4f10a1c8x3d" path="res://minventory/itemimages/note.png" id="2_t4dha"]
+
+[resource]
+script = ExtResource("1_8st0y")
+name = "Lore5"
+description = "“A prison must always have a prisoner.”"
+stackable = false
+texture = ExtResource("2_t4dha")

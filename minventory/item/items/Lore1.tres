@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bayeh1iik1nlj"]
+
+[ext_resource type="Script" path="res://minventory/item/item_data.gd" id="1_7i54k"]
+[ext_resource type="Texture2D" uid="uid://ch4f10a1c8x3d" path="res://minventory/itemimages/note.png" id="2_i0h05"]
+
+[resource]
+script = ExtResource("1_7i54k")
+name = "Lore1"
+description = "“The dungeon was never meant to be opened. Yet here you are.”"
+stackable = false
+texture = ExtResource("2_i0h05")
